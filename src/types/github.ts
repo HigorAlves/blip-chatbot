@@ -16,4 +16,6 @@ export type Repository = {
   open_issues_count: number
   languages_url: string
   owner: Owner
+  language: string
+  created_at: Date
 }

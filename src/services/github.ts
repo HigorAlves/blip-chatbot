@@ -7,8 +7,12 @@ const api = axios.create({
 })
 
 function repoURL(owner: string, repo: string): string {
-  return `repos/${owner}/${repo}`
+  return `/repos/${owner}/${repo}`
 }
+
+/**
+ * Function that will return a promise with a list of Repositories.
+ */
 
 export async function fetchPublicRepositories(): Promise<Repository[]> {
   const TAKE_REPOS_URL = '/orgs/takenet/repos'
@@ -20,6 +24,11 @@ export async function fetchPublicRepositories(): Promise<Repository[]> {
     throw new Error('Error while fetching public repositories')
   }
 }
+/**
+ * Will return a promise with the given repository data;
+ * @param owner the owner of the repository
+ * @param repo repository name
+ */
 
 export async function fetchRepo(
   owner: string,
