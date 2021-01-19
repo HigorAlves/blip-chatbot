@@ -16,4 +16,14 @@ describe('GithubService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined()
   })
+
+  it('should list repositories with C# as language', async () => {
+    const repoList = await service.getReposWithLanguage('C#')
+    expect(repoList[0].language).toEqual('C#')
+  })
+
+  it('should get only 5 repos', async () => {
+    const repoList = await service.getMostOldRepos()
+    expect(repoList).toHaveLength(5)
+  })
 })
