@@ -5,18 +5,12 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
 import * as rateLimit from 'express-rate-limit'
 import * as helmet from 'helmet'
 
-import { join } from 'path'
-
 import { AppModule } from '~/api/app.module'
 import { PORT } from '~/constants'
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule)
   const packageVersion = process.env.npm_package_version
-
-  app.setViewEngine('hbs')
-  app.useStaticAssets(join(__dirname, '..', 'public'))
-  app.setBaseViewsDir(join(__dirname, '..', 'views'))
 
   const options = new DocumentBuilder()
     .setTitle('NestJS API Template')
