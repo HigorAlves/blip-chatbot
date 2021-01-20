@@ -1,5 +1,7 @@
 /* eslint-disable camelcase */
 
+import { ApiProperty } from '@nestjs/swagger'
+
 export type Owner = {
   avatar_url: string
   login: string
@@ -23,5 +25,16 @@ export type Repository = {
 export type RepositoryMinified = {
   name: string
   description: string
+  image: string
+}
+
+export class RepositoryMinifiedClass {
+  @ApiProperty()
+  name: string
+
+  @ApiProperty()
+  description: string
+
+  @ApiProperty()
   image: string
 }

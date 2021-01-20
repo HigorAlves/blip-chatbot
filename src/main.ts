@@ -13,10 +13,9 @@ async function bootstrap() {
   const packageVersion = process.env.npm_package_version
 
   const options = new DocumentBuilder()
-    .setTitle('NestJS API Template')
+    .setTitle('Blip Chatbot API')
     .setDescription('This is API Version')
     .setVersion(packageVersion)
-    .addTag('api')
     .build()
   const document = SwaggerModule.createDocument(app, options)
   SwaggerModule.setup('api', app, document)
