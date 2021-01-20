@@ -1,75 +1,30 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Take Blip
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Chatbot Developer Challenge
 
-## Description
+Você deverá construir um chatbot em nossa plataforma, para isso, você pode seguir esses passos:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- crie uma conta em nosso portal (https://bit.ly/3lYcJTf), depois crie um chatbot usando a opção "Criar do zero";
 
-## Installation
+- crie uma API que faça integração com a API pública do GitHub com informações sobre os repositórios da Take no GitHub. Para criá-la, você pode usar C#, Java ou Javascript;
 
-```bash
-$ npm install
-```
+- agora que você tem a API criada, deverá utilizar esses dados para exibir um carrossel a partir de qualquer entrada do usuário com informações sobre os 5 repositórios de linguagem C# mais antigos da Take, ordenados de forma crescente por data de criação;
 
-## Running the app
+- a imagem de cada card do carrossel deve ser o avatar da Take no GitHub. O título de cada card deve ser o nome completo do repositório, e o subtítulo deve ser a descrição do repositório. Os cards não devem ter nenhum botão;
 
-```bash
-# development
-$ npm run start
+- o fluxo do bot precisa estar parecido com o que está no link:https://bit.ly/2uDaGhi;
 
-# watch mode
-$ npm run start:dev
+- favor colocar no repositório o json do fluxo do bot para que o mesmo possa ser avaliado.
 
-# production mode
-$ npm run start:prod
-```
+Seguem links que podem auxiliar em seu desafio:
 
-## Test
+- Fluxo do bot: https://bit.ly/3bxfe9F
+- Documentação do BLiP com todos os tipos de card e exemplos: https://docs.blip.ai/
+- Documentação de como criar um bot no Builder: https://bit.ly/37n4F5G
+- Documentação da API do GitHub: https://developer.github.com/v3/
 
-```bash
-# unit tests
-$ npm run test
+## To Run
 
-# e2e tests
-$ npm run test:e2e
+To run this API just run `yarn start` or you can just use the Heroku endpoint `https://blip-test.herokuapp.com/github`.
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
+**Bot File**: The Json bot file is named as `bot_json.json`.

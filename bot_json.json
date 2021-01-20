@@ -1,0 +1,1745 @@
+{
+  "onboarding": {
+    "$contentActions": [
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "029309a4-fcee-4c44-b846-8e0ae86e0665",
+              "type": "text/plain",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": false,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "welcome",
+        "conditions": [
+          { "source": "input", "comparison": "matches", "values": [".*"] }
+        ],
+        "$id": "0dc35518-eb30-4810-96a6-b1dbadac1506",
+        "$connId": "con_3",
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": { "stateId": "fallback", "$invalid": false },
+    "$tags": [],
+    "id": "onboarding",
+    "root": true,
+    "$position": { "top": "120px", "left": "644px" },
+    "$title": "Início",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "fallback": {
+    "$contentActions": [
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "b03978c7-9a20-4e68-b201-1494d860fd0b",
+              "type": "text/plain"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "error",
+        "conditions": [
+          { "source": "input", "comparison": "matches", "values": [".*"] }
+        ],
+        "$id": "37788ae4-b4bf-4eea-a8b2-b87806e82897",
+        "$connId": "con_8",
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": { "stateId": "onboarding", "$invalid": false },
+    "$tags": [],
+    "id": "fallback",
+    "$position": { "top": "120px", "left": "877px" },
+    "$title": "Exceções",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "welcome": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "141fedb7-9ed5-454f-b093-76589a1d4f7a",
+          "type": "SendMessage",
+          "settings": {
+            "id": "6233ebe6-f395-4f9b-838a-d47590722097",
+            "type": "text/plain",
+            "content": "Olá, espero que esteja tudo.\nSou a Lora responsável por passar os valores da Take. ",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "6233ebe6-f395-4f9b-838a-d47590722097",
+              "type": "text/plain",
+              "content": "Olá, espero que esteja tudo.\nSou a Lora responsável por passar os valores da Take. "
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "3a8ebb1e-c85b-432c-8942-c53db82ab2b6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "1f0ccc0a-39aa-4e7b-aaa2-0e3f5e94b614",
+            "type": "text/plain",
+            "content": "Ok. Entendo. Mesmo eu sendo um robô e não tendo consciência sobre o que é valores mas posso te ajudar de alguma forma.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "1f0ccc0a-39aa-4e7b-aaa2-0e3f5e94b614",
+              "type": "text/plain",
+              "content": "Ok. Entendo. Mesmo eu sendo um robô e não tendo consciência sobre o que é valores mas posso te ajudar de alguma forma."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "802045aa-1226-466a-974f-8ca67be89722",
+              "type": "text/plain",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "8f6815d5-ad00-4c79-aa86-2ae74d23c51e",
+          "type": "SendMessage",
+          "settings": {
+            "id": "94906f87-1570-499d-86e4-7301a8233056",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": { "state": "composing", "interval": "4000" },
+            "metadata": {
+              "#stateName": "{{state.name}}",
+              "#stateId": "{{state.id}}",
+              "#messageId": "{{input.message@id}}"
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "94906f87-1570-499d-86e4-7301a8233056",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": { "state": "composing", "interval": "4000" }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "e1fb99fe-30e7-4592-9110-bb91c2552c15",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cd859b7b-432b-4780-a566-afd54fc23dce",
+            "type": "text/plain",
+            "content": "Vamos lá...",
+            "metadata": {
+              "#stateName": "{{state.name}}",
+              "#stateId": "{{state.id}}",
+              "#messageId": "{{input.message@id}}"
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cd859b7b-432b-4780-a566-afd54fc23dce",
+              "type": "text/plain",
+              "content": "Vamos lá..."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "8ad9de09-3b54-4317-96f9-9979a2d98024",
+          "type": "SendMessage",
+          "settings": {
+            "id": "9653558c-7149-47c1-9500-f8a6e0548378",
+            "type": "text/plain",
+            "content": "A cultura Take tem como base 6 valores que são:",
+            "metadata": {
+              "#stateName": "{{state.name}}",
+              "#stateId": "{{state.id}}",
+              "#messageId": "{{input.message@id}}"
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "9653558c-7149-47c1-9500-f8a6e0548378",
+              "type": "text/plain",
+              "content": "A cultura Take tem como base 6 valores que são:"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "793e8299-4a27-4f4a-a010-4624cdf6d300",
+        "$connId": "con_13",
+        "$id": "afb5c304-48b7-4d50-8df3-280a753fc041",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": { "stateId": "fallback", "$invalid": false },
+    "$tags": [],
+    "id": "welcome",
+    "$position": { "top": "240px", "left": "644px" },
+    "$title": "Boas vindas",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "error": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "f2debc54-d02f-495c-8c81-b880c30d78e7",
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000002",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": { "state": "composing", "interval": 1000 }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000002",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": { "state": "composing", "interval": 1000 }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "8d108e59-c36e-4c9c-aa52-efdf5b052646",
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000003",
+            "type": "text/plain",
+            "content": "Desculpe, não consegui entender!"
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000003",
+              "type": "text/plain",
+              "content": "Desculpe, não consegui entender!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "8f8a12d5-a971-4413-98a2-4a7fb84fe8fd",
+              "type": "text/plain"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": { "stateId": "onboarding", "$invalid": false },
+    "$tags": [],
+    "id": "error",
+    "$position": { "top": "240px", "left": "877px" },
+    "$title": "Erro padrão",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "793e8299-4a27-4f4a-a010-4624cdf6d300": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "f9db83f5-1c3a-4c05-bd05-2e0e56345b98",
+          "type": "SendMessage",
+          "settings": {
+            "id": "018d9ee3-f724-4f66-be95-9d1f863883f1",
+            "type": "application/vnd.lime.collection+json",
+            "content": {
+              "itemType": "application/vnd.lime.document-select+json",
+              "items": [
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Be",
+                      "text": "Pessoas em 1º lugar",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/dtNwA6x.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "💙 Saber mais"
+                      },
+                      "value": { "type": "text/plain", "value": "#be" }
+                    }
+                  ],
+                  "id": 0,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Team",
+                      "text": "Em nosso time, cada pessoa dá o seu melhor",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/Ajprc3s.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "🏳️ Saber mais"
+                      },
+                      "value": { "type": "text/plain", "value": "#team" }
+                    }
+                  ],
+                  "id": 1,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Execellence",
+                      "text": "Excelente é o nosso ponto de partida",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/xccAAD0.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "⭐ Saber mais"
+                      },
+                      "value": { "type": "text/plain", "value": "#execellence" }
+                    }
+                  ],
+                  "editing": false,
+                  "id": 2
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Charge",
+                      "text": "Apropriar-se para fazer a diferença",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/LSu6SRH.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "⚡ Saber mais"
+                      },
+                      "value": { "type": "text/plain", "value": "#charge" }
+                    }
+                  ],
+                  "editing": false,
+                  "id": 3
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Simple",
+                      "text": "Simplicidade é o último grau de sofisticação",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/0PESRLY.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "🎯 Saber mais"
+                      },
+                      "value": { "type": "text/plain", "value": "#simple" }
+                    }
+                  ],
+                  "editing": false,
+                  "id": 4
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Take.Higher",
+                      "text": "Pensar grande e ir além",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/hJ6DNr4.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "🚀 Saber mais"
+                      },
+                      "value": { "type": "text/plain", "value": "#higher" }
+                    }
+                  ],
+                  "editing": false,
+                  "id": 5
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "Desafio",
+                      "text": "----",
+                      "type": "image/png",
+                      "uri": "https://i.imgur.com/zDHJoEb.png",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [
+                    {
+                      "label": {
+                        "type": "text/plain",
+                        "value": "Fazer desafio"
+                      },
+                      "value": { "type": "text/plain", "value": "#challenge" }
+                    }
+                  ],
+                  "editing": false,
+                  "id": 6
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "018d9ee3-f724-4f66-be95-9d1f863883f1",
+              "type": "application/vnd.lime.collection+json",
+              "content": {
+                "itemType": "application/vnd.lime.document-select+json",
+                "items": [
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Be",
+                        "text": "Pessoas em 1º lugar",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/dtNwA6x.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "💙 Saber mais"
+                        },
+                        "value": { "type": "text/plain", "value": "#be" }
+                      }
+                    ],
+                    "id": 0,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Team",
+                        "text": "Em nosso time, cada pessoa dá o seu melhor",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/Ajprc3s.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "🏳️ Saber mais"
+                        },
+                        "value": { "type": "text/plain", "value": "#team" }
+                      }
+                    ],
+                    "id": 1,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Execellence",
+                        "text": "Excelente é o nosso ponto de partida",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/xccAAD0.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "⭐ Saber mais"
+                        },
+                        "value": {
+                          "type": "text/plain",
+                          "value": "#execellence"
+                        }
+                      }
+                    ],
+                    "editing": false,
+                    "id": 2
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Charge",
+                        "text": "Apropriar-se para fazer a diferença",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/LSu6SRH.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "⚡ Saber mais"
+                        },
+                        "value": { "type": "text/plain", "value": "#charge" }
+                      }
+                    ],
+                    "editing": false,
+                    "id": 3
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Simple",
+                        "text": "Simplicidade é o último grau de sofisticação",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/0PESRLY.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "🎯 Saber mais"
+                        },
+                        "value": { "type": "text/plain", "value": "#simple" }
+                      }
+                    ],
+                    "editing": false,
+                    "id": 4
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Take.Higher",
+                        "text": "Pensar grande e ir além",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/hJ6DNr4.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "🚀 Saber mais"
+                        },
+                        "value": { "type": "text/plain", "value": "#higher" }
+                      }
+                    ],
+                    "editing": false,
+                    "id": 5
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "Desafio",
+                        "text": "----",
+                        "type": "image/png",
+                        "uri": "https://i.imgur.com/zDHJoEb.png",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [
+                      {
+                        "label": {
+                          "type": "text/plain",
+                          "value": "Fazer desafio"
+                        },
+                        "value": { "type": "text/plain", "value": "#challenge" }
+                      }
+                    ],
+                    "editing": false,
+                    "id": 6
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false,
+        "$$hashKey": "object:615"
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "1de4ac70-746f-4d5b-97b9-0bca72c5c3f6",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false,
+        "$$hashKey": "object:616"
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "dece312e-66ab-4a64-adad-846dfaa15618",
+        "$connId": "con_18",
+        "$id": "9117817a-04e3-4001-8400-cc0113d6d4e1",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#be"],
+            "$$hashKey": "object:841"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:804"
+      },
+      {
+        "stateId": "97af138b-fbf0-45f9-a1eb-16edbc238bb0",
+        "$connId": "con_23",
+        "$id": "0cee5e42-36ff-413e-b6df-c50e66b5f161",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#team"],
+            "$$hashKey": "object:864"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:805"
+      },
+      {
+        "stateId": "9cc9c496-8b51-4d33-8a82-fab98bf472e2",
+        "$connId": "con_28",
+        "$id": "bef86050-e204-42ce-a61e-b91712007295",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#execellence"],
+            "$$hashKey": "object:887"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:806"
+      },
+      {
+        "stateId": "7b034daf-0f14-44da-8e05-174a5733eb57",
+        "$connId": "con_33",
+        "$id": "5fe11604-d816-4bd4-a1cc-bbb1f745d15f",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#charge"],
+            "$$hashKey": "object:910"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:807"
+      },
+      {
+        "stateId": "8b87a481-5ac4-4018-9275-12076bd0d4e0",
+        "$connId": "con_38",
+        "$id": "56ef5491-822e-48c1-8ece-a88619f3c676",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#simple"],
+            "$$hashKey": "object:933"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:808"
+      },
+      {
+        "stateId": "4f23c753-ec20-4f3b-899d-232538eb5a25",
+        "$connId": "con_43",
+        "$id": "9cd8cb3a-b080-4053-9acb-3dbb46be2806",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#higher"],
+            "$$hashKey": "object:956"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:809"
+      },
+      {
+        "stateId": "76f2f6dd-6402-4784-be40-dc2fef40a3f6",
+        "$connId": "con_48",
+        "$id": "f74272f3-3885-42dd-a965-938e1bce81ff",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#challenge"],
+            "$$hashKey": "object:979"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:810"
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": { "stateId": "fallback", "$invalid": false },
+    "$tags": [],
+    "id": "793e8299-4a27-4f4a-a010-4624cdf6d300",
+    "root": false,
+    "$title": "Cultura take",
+    "$position": { "top": "363px", "left": "644px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "dece312e-66ab-4a64-adad-846dfaa15618": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "aeffff42-c4fd-43e4-9999-b59527cde176",
+          "type": "SendMessage",
+          "settings": {
+            "id": "9d73f911-98b8-4207-b462-f6d50575942b",
+            "type": "text/plain",
+            "content": "A Take é feita por pessoas e para pessoas. Nossas relações são transparentes e humanizadas.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "9d73f911-98b8-4207-b462-f6d50575942b",
+              "type": "text/plain",
+              "content": "A Take é feita por pessoas e para pessoas. Nossas relações são transparentes e humanizadas."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "b1226c2c-2931-4f7b-b1c1-2ee9f2b9a968",
+          "type": "SendMessage",
+          "settings": {
+            "id": "3aee3375-4ca9-454b-b960-30104b651bb6",
+            "type": "text/plain",
+            "content": " Cada cliente, cada parceiro e cada Take.Ser é valorizado e respeitado em sua individualidade e está presente em cada bit de nossa empresa.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "3aee3375-4ca9-454b-b960-30104b651bb6",
+              "type": "text/plain",
+              "content": " Cada cliente, cada parceiro e cada Take.Ser é valorizado e respeitado em sua individualidade e está presente em cada bit de nossa empresa."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "f70c90b4-8a59-46f1-9302-c89570444641",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_53",
+        "$id": "ff9443a2-546a-4f28-8e4a-a0e8a72035cf",
+        "conditions": [
+          { "source": "input", "comparison": "notExists", "values": [] }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_58",
+        "$id": "c2fd08e3-194a-4daf-ae31-dbeebd0128c5",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "dece312e-66ab-4a64-adad-846dfaa15618",
+    "root": false,
+    "$title": "Take.be",
+    "$position": { "top": "722px", "left": "187px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "374c0014-1307-48af-b91f-fea912bd458b": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "9a0fcac9-a251-497b-a45d-f61c5386d321",
+          "type": "SendMessage",
+          "settings": {
+            "id": "6fc437e2-f31e-49ee-b425-fee4134e8f8d",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": { "state": "composing", "interval": "4000" },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "6fc437e2-f31e-49ee-b425-fee4134e8f8d",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": { "state": "composing", "interval": "4000" }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "$id": "d338772f-2357-4329-9700-b27a37c2756c",
+          "type": "SendMessage",
+          "settings": {
+            "id": "42ff0897-b175-4e9f-adfb-173c6606cbcc",
+            "type": "application/vnd.lime.select+json",
+            "content": {
+              "text": "Se quiser saber mais sobre outros valores é só falar",
+              "scope": "immediate",
+              "options": [
+                {
+                  "text": "💙 Be",
+                  "previewText": "💙 Be",
+                  "value": "#be_back",
+                  "index": 0,
+                  "type": "text/plain"
+                },
+                {
+                  "text": "🏳️ Team",
+                  "previewText": "🏳️ Team",
+                  "value": "#team_back",
+                  "index": 1,
+                  "type": "text/plain"
+                },
+                {
+                  "index": 2,
+                  "text": "⭐ Excellence",
+                  "type": "text/plain",
+                  "value": "#excellence_back",
+                  "previewText": "⭐ Excellence"
+                },
+                {
+                  "index": 3,
+                  "text": "⚡ Charge",
+                  "type": "text/plain",
+                  "value": "#charge_back",
+                  "previewText": "⚡ Charge"
+                },
+                {
+                  "index": 4,
+                  "text": "🎯 Simple",
+                  "type": "text/plain",
+                  "value": "#simple_back",
+                  "previewText": "🎯 Simple"
+                },
+                {
+                  "index": 5,
+                  "text": "🚀 Higher",
+                  "type": "text/plain",
+                  "value": "#higher_back",
+                  "previewText": "🚀 Higher"
+                }
+              ]
+            },
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "42ff0897-b175-4e9f-adfb-173c6606cbcc",
+              "type": "application/vnd.lime.select+json",
+              "content": {
+                "text": "Se quiser saber mais sobre outros valores é só falar",
+                "scope": "immediate",
+                "options": [
+                  {
+                    "text": "💙 Be",
+                    "previewText": "💙 Be",
+                    "value": "#be_back",
+                    "index": 0,
+                    "type": "text/plain"
+                  },
+                  {
+                    "text": "🏳️ Team",
+                    "previewText": "🏳️ Team",
+                    "value": "#team_back",
+                    "index": 1,
+                    "type": "text/plain"
+                  },
+                  {
+                    "index": 2,
+                    "text": "⭐ Excellence",
+                    "type": "text/plain",
+                    "value": "#excellence_back",
+                    "previewText": "⭐ Excellence"
+                  },
+                  {
+                    "index": 3,
+                    "text": "⚡ Charge",
+                    "type": "text/plain",
+                    "value": "#charge_back",
+                    "previewText": "⚡ Charge"
+                  },
+                  {
+                    "index": 4,
+                    "text": "🎯 Simple",
+                    "type": "text/plain",
+                    "value": "#simple_back",
+                    "previewText": "🎯 Simple"
+                  },
+                  {
+                    "index": 5,
+                    "text": "🚀 Higher",
+                    "type": "text/plain",
+                    "value": "#higher_back",
+                    "previewText": "🚀 Higher"
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "27f47531-6300-4856-ace0-f45ab5603d1b",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "dece312e-66ab-4a64-adad-846dfaa15618",
+        "$connId": "con_63",
+        "$id": "8d941531-9fb2-4e87-bad3-36ac3372c628",
+        "conditions": [
+          { "source": "input", "comparison": "equals", "values": ["#be_back"] }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "97af138b-fbf0-45f9-a1eb-16edbc238bb0",
+        "$connId": "con_68",
+        "$id": "2b4b5300-52b3-4371-a1a9-50b691b14b24",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#team_back"]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "9cc9c496-8b51-4d33-8a82-fab98bf472e2",
+        "$connId": "con_73",
+        "$id": "ecc3cd85-ff6d-4b1e-a3c5-20d639004e49",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#excellence_back"]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "7b034daf-0f14-44da-8e05-174a5733eb57",
+        "$connId": "con_78",
+        "$id": "136dfdbd-4335-4119-9817-ba229a6957d2",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#charge_back"]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "8b87a481-5ac4-4018-9275-12076bd0d4e0",
+        "$connId": "con_83",
+        "$id": "cbd89624-0232-4720-913d-ec42818401fc",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#simple_back"]
+          }
+        ],
+        "$invalid": false
+      },
+      {
+        "stateId": "4f23c753-ec20-4f3b-899d-232538eb5a25",
+        "$connId": "con_88",
+        "$id": "885ae34b-07f0-4959-af6a-f05bd38377ff",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "equals",
+            "values": ["#higher_back"]
+          }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [
+      "#be_back",
+      "#team_back",
+      "#excellence_back",
+      "#charge_back",
+      "#simple_back",
+      "#higher_back"
+    ],
+    "$defaultOutput": {
+      "stateId": "793e8299-4a27-4f4a-a010-4624cdf6d300",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "374c0014-1307-48af-b91f-fea912bd458b",
+    "root": false,
+    "$title": "END",
+    "$position": { "top": "886px", "left": "578px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "97af138b-fbf0-45f9-a1eb-16edbc238bb0": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "e04bf42f-7f6b-4415-b0c7-2161169a787a",
+          "type": "SendMessage",
+          "settings": {
+            "id": "b92fcd82-3d3a-448d-9475-143baba89956",
+            "type": "text/plain",
+            "content": "Sabemos que o que faz uma equipe incrível são pessoas incríveis em cooperação. Assim, cada Take.ser busca cumprir sua parte para garantir a vitória do time.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "b92fcd82-3d3a-448d-9475-143baba89956",
+              "type": "text/plain",
+              "content": "Sabemos que o que faz uma equipe incrível são pessoas incríveis em cooperação. Assim, cada Take.ser busca cumprir sua parte para garantir a vitória do time."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "db1a137e-4d95-498d-9695-4ede73b27e35",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_93",
+        "$id": "c79e12dd-6cce-490e-a279-123c8162e414",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "97af138b-fbf0-45f9-a1eb-16edbc238bb0",
+    "root": false,
+    "$title": "Take.Team",
+    "$position": { "top": "499px", "left": "537px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "9cc9c496-8b51-4d33-8a82-fab98bf472e2": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "b305c7dc-140d-481c-a184-700eb0577c17",
+          "type": "SendMessage",
+          "settings": {
+            "id": "8485ca84-98cb-4b7d-8649-29ae92d0b5e5",
+            "type": "text/plain",
+            "content": "Com nosso espírito geek e nossa disposição para aprender e crescer, buscamos estar sempre um passo a frente e superarmos os mais exigentes padrões.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "8485ca84-98cb-4b7d-8649-29ae92d0b5e5",
+              "type": "text/plain",
+              "content": "Com nosso espírito geek e nossa disposição para aprender e crescer, buscamos estar sempre um passo a frente e superarmos os mais exigentes padrões."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "8c0312e3-4674-497f-8d5e-da3422fa2c77",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_98",
+        "$id": "a68130f4-0ada-43c0-b6c7-161162eb2fa6",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "9cc9c496-8b51-4d33-8a82-fab98bf472e2",
+    "root": false,
+    "$title": "Take.Execellence",
+    "$position": { "top": "938px", "left": "1046px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "7b034daf-0f14-44da-8e05-174a5733eb57": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "11556557-1cdc-49c5-89af-b3776172e6c6",
+          "type": "SendMessage",
+          "settings": {
+            "id": "150528f1-35ee-454e-b021-71cdaef8caea",
+            "type": "text/plain",
+            "content": "Apostamos em profissionais que chamam a responsabilidade para si e que, sem medo de ousar, transformem o mundo a sua volta, com muita competência e criatividade!",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "150528f1-35ee-454e-b021-71cdaef8caea",
+              "type": "text/plain",
+              "content": "Apostamos em profissionais que chamam a responsabilidade para si e que, sem medo de ousar, transformem o mundo a sua volta, com muita competência e criatividade!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "4d9d6d3d-f0a9-47f1-96c5-d9d9ac87684d",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_103",
+        "$id": "09935412-ee12-4457-b1cd-e61f1c202c04",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "7b034daf-0f14-44da-8e05-174a5733eb57",
+    "root": false,
+    "$title": "Take.Charge",
+    "$position": { "top": "652px", "left": "1177px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "8b87a481-5ac4-4018-9275-12076bd0d4e0": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "29ac32a0-96f7-4b4d-b873-9db8e04826a7",
+          "type": "SendMessage",
+          "settings": {
+            "id": "978b41f4-01e2-47d9-b87a-1b7f6c78bd63",
+            "type": "text/plain",
+            "content": "Mantemos o foco no essencial. Menos é mais.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "978b41f4-01e2-47d9-b87a-1b7f6c78bd63",
+              "type": "text/plain",
+              "content": "Mantemos o foco no essencial. Menos é mais."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "52e5c8ed-5d9d-4d09-9278-a0595ed8003f",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_108",
+        "$id": "9e83fcf7-6740-4b80-a124-3e8225381adf",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "8b87a481-5ac4-4018-9275-12076bd0d4e0",
+    "root": false,
+    "$title": "Take.Simple",
+    "$position": { "top": "433px", "left": "127px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "4f23c753-ec20-4f3b-899d-232538eb5a25": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "222f0451-7ed9-44ec-a917-4ccb97716cb9",
+          "type": "SendMessage",
+          "settings": {
+            "id": "cfb48fc5-8d44-4a98-bb66-9bcc7cc81499",
+            "type": "text/plain",
+            "content": "Não temos medo de sonhar grande, pois sabemos que temos talento e determinação para realizar coisas incríveis!",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "cfb48fc5-8d44-4a98-bb66-9bcc7cc81499",
+              "type": "text/plain",
+              "content": "Não temos medo de sonhar grande, pois sabemos que temos talento e determinação para realizar coisas incríveis!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "b55bce24-99fb-4c1a-8035-90a184f8feba",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+        "$connId": "con_113",
+        "$id": "03e232bb-b80c-4248-907c-255d183d52ed",
+        "conditions": [
+          { "source": "input", "comparison": "exists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "374c0014-1307-48af-b91f-fea912bd458b",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "4f23c753-ec20-4f3b-899d-232538eb5a25",
+    "root": false,
+    "$title": "Take.Higher",
+    "$position": { "top": "575px", "left": "99px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "76f2f6dd-6402-4784-be40-dc2fef40a3f6": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "6c83cb04-58da-445c-bf13-2722030f7e82",
+          "type": "SendMessage",
+          "settings": {
+            "id": "e20b9896-3181-40a7-bac4-26498fb88529",
+            "type": "text/plain",
+            "content": "Você deve criar uma API que faça integração com a API pública do GitHub, e um chatbot em nossa plataforma que consuma sua API para exibir um carrossel com informações sobre os repositórios da Take no GitHub. Para criar a API, você pode usar C#, Java ou Javascript.",
+            "metadata": {}
+          },
+          "$cardContent": {
+            "document": {
+              "id": "e20b9896-3181-40a7-bac4-26498fb88529",
+              "type": "text/plain",
+              "content": "Você deve criar uma API que faça integração com a API pública do GitHub, e um chatbot em nossa plataforma que consuma sua API para exibir um carrossel com informações sobre os repositórios da Take no GitHub. Para criar a API, você pode usar C#, Java ou Javascript."
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "231b5e94-427e-41c2-840a-74bf04925841",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "ba05237d-48df-468a-b693-6409cd33cd1e",
+        "$connId": "con_118",
+        "$id": "cadf79e7-70f1-45e1-b61e-bf74c4ad631a",
+        "conditions": [
+          { "source": "input", "comparison": "notExists", "values": [] }
+        ],
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "ba05237d-48df-468a-b693-6409cd33cd1e",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "76f2f6dd-6402-4784-be40-dc2fef40a3f6",
+    "root": false,
+    "$title": "Challenge Text",
+    "$position": { "top": "435px", "left": "1250px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "ba05237d-48df-468a-b693-6409cd33cd1e": {
+    "$contentActions": [
+      {
+        "action": {
+          "$id": "6c49c713-f02d-4bdb-940f-eb48db12b1c7",
+          "type": "SendRawMessage",
+          "settings": {
+            "metadata": {},
+            "type": "application/vnd.lime.collection+json",
+            "rawContent": "{{carrousel}}"
+          }
+        },
+        "$invalid": false,
+        "$$hashKey": "object:1287"
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "d4a2edb3-c9df-48bf-a8e6-05e4582653b3",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false,
+        "$$hashKey": "object:1288"
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "onboarding",
+        "$connId": "con_123",
+        "$id": "9dc4613f-6038-4f9c-8169-6e6b5adfc72b",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "exists",
+            "values": [],
+            "$$hashKey": "object:1489"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:1470"
+      }
+    ],
+    "$enteringCustomActions": [
+      {
+        "$id": "6ccedf98-e565-4259-8132-cdeb3c43f66a",
+        "type": "ProcessHttp",
+        "$title": "Requisição HTTP",
+        "$invalid": false,
+        "settings": {
+          "headers": {},
+          "method": "GET",
+          "uri": "https://blip-test.herokuapp.com/github",
+          "responseStatusVariable": "status",
+          "responseBodyVariable": "response"
+        },
+        "conditions": []
+      },
+      {
+        "$id": "16c3772d-9137-4a53-bf35-19b85ba500b9",
+        "type": "ExecuteScript",
+        "$title": "Executar script",
+        "$invalid": false,
+        "settings": {
+          "function": "run",
+          "source": "/**\n            * All input variables needs to be passed as function param;\n            * Objects received as param needs to be parsed. Ex.: JSON.parse(inputVariable1);\n            * Objects returned needs to be stringfied. Ex.: JSON.stringify(inputVariable1);\n            **/\n            function run(response, status) {\n                if (status == 200){                  \n                    const carrousel = [];\n                    const data = JSON.parse(response)\n\n                    data.map(item => {\n                        carrousel.push({\n                            header: {\n                                type: \"application/vnd.lime.media-link+json\",\n                                value: {\n                                    title: item.name,\n                                    text: item.description,\n                                    type: \"image/jpeg\",\n                                    uri: item.image\n                                }\n                            },\n                            options: []\n                        })\n                    })\n\n                    return {\n                        itemType: \"application/vnd.lime.document-select+json\",\n                        items: carrousel\n                    }\n                }\n            }",
+          "inputVariables": ["response", "status"],
+          "outputVariable": "carrousel"
+        },
+        "conditions": []
+      }
+    ],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": { "stateId": "fallback", "$invalid": false },
+    "$tags": [],
+    "id": "ba05237d-48df-468a-b693-6409cd33cd1e",
+    "root": false,
+    "$title": "Challenge",
+    "$position": { "top": "332px", "left": "1560px" },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  }
+}

@@ -19,3 +19,9 @@ export type Repository = {
   language: string
   created_at: Date
 }
+
+export type RepositoryMinified = {
+  name: string
+  description: string
+  image: string
+}

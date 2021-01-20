@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 
 import { fetchPublicRepositories } from '~/services/github'
-import { Repository } from '~/types/github'
+import { Repository, RepositoryMinified } from '~/types/github'
 import { dateSort } from '~/utils/dateSort'
 
 @Injectable()
@@ -19,11 +19,21 @@ export class GithubService {
     return onlyWithLanguage
   }
 
-  async getMostOldRepos(): Promise<Repository[] | []> {
+  async getMostOldRepos(): Promise<RepositoryMinified[] | []> {
+    const result = []
     const repos = await this.getReposWithLanguage()
 
     repos.sort(dateSort)
+    const aux = repos.slice(0, 5)
 
-    return repos.slice(0, 5)
+    aux.forEach(item => {
+      result.push({
+        name: item.name,
+        description: item.description,
+        image: item.owner.avatar_url
+      })
+    })
+
+    return result
   }
 }
